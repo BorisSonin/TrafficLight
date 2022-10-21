@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exy-xB-zVY">
+                                <rect key="frame" x="120" y="67" width="150" height="150"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4N-BW-54r">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ysu-Dl-umk">
+                                <rect key="frame" x="120" y="225" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-AA-4wF">
+                                <rect key="frame" x="120" y="383" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LS6-7x-aHa"/>
+                                    <constraint firstAttribute="width" constant="150" id="nWm-pk-Bvs"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJj-ZU-VFC">
+                                <rect key="frame" x="120" y="653" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Js6-xW-fVB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START"/>
+                                <connections>
+                                    <action selector="switchButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Raw-Ht-eMQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mJj-ZU-VFC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="8Yn-N4-NjE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ysu-Dl-umk" secondAttribute="trailing" constant="120" id="9Wo-OM-gz9"/>
+                            <constraint firstItem="mJj-ZU-VFC" firstAttribute="top" secondItem="Ben-AA-4wF" secondAttribute="bottom" constant="120" id="JGv-ZI-DpS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ben-AA-4wF" secondAttribute="trailing" constant="120" id="TUr-sf-mTu"/>
+                            <constraint firstItem="Ben-AA-4wF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="383" id="TYp-vT-fMq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="exy-xB-zVY" secondAttribute="trailing" constant="120" id="X2B-FG-Ai4"/>
+                            <constraint firstItem="Ben-AA-4wF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="c17-w8-g8N"/>
+                            <constraint firstItem="Ben-AA-4wF" firstAttribute="top" secondItem="Ysu-Dl-umk" secondAttribute="bottom" constant="8" symbolic="YES" id="d98-XZ-3fw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mJj-ZU-VFC" secondAttribute="trailing" constant="120" id="fYz-8f-fGk"/>
+                            <constraint firstItem="Ysu-Dl-umk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="225" id="kKA-DS-40T"/>
+                            <constraint firstItem="exy-xB-zVY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="ocn-L8-4ct"/>
+                            <constraint firstItem="exy-xB-zVY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tMx-V9-bCB"/>
+                            <constraint firstItem="Ysu-Dl-umk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="yPd-KL-PYa"/>
+                            <constraint firstItem="Ysu-Dl-umk" firstAttribute="top" secondItem="exy-xB-zVY" secondAttribute="bottom" constant="8" symbolic="YES" id="yvj-Gc-82P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mJj-ZU-VFC" secondAttribute="bottom" constant="107" id="zzP-r2-WaH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="Ben-AA-4wF" id="yyD-qn-8d1"/>
+                        <outlet property="redLightView" destination="B4N-BW-54r" id="vp5-76-wRn"/>
+                        <outlet property="switchButton" destination="Ben-AA-4wF" id="SJj-Fd-ZFC"/>
+                        <outlet property="yellowLightView" destination="Ysu-Dl-umk" id="i6P-HB-Egq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="90.769230769230759" y="-28.436018957345969"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
