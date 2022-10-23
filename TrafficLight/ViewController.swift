@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var switchButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,8 +28,10 @@ class ViewController: UIViewController {
         yellowLightView.layer.cornerRadius = 75
         greenLightView.layer.cornerRadius = 75
         
-        
+        switchButton.layer.cornerRadius = 10
     }
+    
+    
     @IBAction func switchButtonTapped() {
         switchButton.setTitle("NEXT", for: .normal)
         
